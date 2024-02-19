@@ -1,0 +1,922 @@
+
+* {
+    margin: 0;
+}
+
+/* phan css img backgroun */
+#banner img {
+   width: 100%;
+   height: auto;
+   position: relative;
+}
+
+/* chen chu vao img */
+.text-on-image {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(192, 192, 192);
+  }
+  /*css phan thanh dieu huong nav  */
+#nav-bar {
+  background-color: white;
+  overflow: hidden;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -80px;
+  align-items: center; 
+  
+  
+}
+/*nav font awesome style */
+.fa {
+    color: rgb(110, 110, 241);
+}
+.plus {
+    margin-right: 100px;
+}
+.plus_2 {
+    margin-left: 100px;
+}
+
+/* nav link style */
+#nav-bar a {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    border-left: 1px solid #ddd;
+
+}
+
+  #nav-bar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+ 
+.nav-info img {
+    display: inline-block;
+    align-items: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border:10px solid white;
+    position: absolute;
+    left:800px;
+    top:835px;
+    
+}
+/* css phan thong tin ca nhan */
+#about .container {
+ display: flex;
+ align-items: center;
+ padding: 0;
+ 
+}
+
+#target {
+    flex:1;
+    align-items: flex-start;
+    background-color: #ddd;
+    padding: 80px 40px;
+    margin-top:21px;
+   
+}
+/* css hiding mission */
+.hidden {
+    display: none;
+}
+.form-style {
+    flex: 1;
+    align-items: center;
+    padding: 70px 40px; 
+    margin-left: -40px;
+    justify-self: start;
+}
+/* setting email login */
+.form-style input[type='email'] {
+  border: 0;
+  border: 1px solid #b4becb;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.Submit {
+    margin-left: 0 !important;
+    margin-top: 20px;
+}
+/* create hide button for email form */
+.hide {
+ position: absolute;
+ right:500px;
+ border:none;
+
+}
+/* submit button style */
+.showcase-form input:focus {
+    outline: none;
+}
+.form input:hover {
+    box-shadow: 3px 0 10px 0 #199cdb;
+    scale: 1.01;
+}
+  /*personal in4 style  */
+#personal-info {
+    flex: 1;
+    align-items: center;
+    background-color: #f0eeee;
+    padding: 40px 40px; 
+    height: 400px;
+}
+
+#personal-info li {
+    list-style: none;
+    margin-left: -38px;
+    line-height: 30px;
+}
+#personal-info a {
+    text-decoration: none;
+}
+#personal-info a:hover {
+    color:red;
+}
+.bg-grey {
+    background: #f7f7f7;
+}
+/* css cho phan ly lich */
+#job-block {
+   width: 1170px;
+   margin: 10px 345px ;
+   display: grid;
+   grid-template-columns: auto auto auto;
+   grid-template-rows:auto auto ;
+   gap: 20px;
+}
+/* css cột con */
+
+/* kinh nghiem */
+.c1 {
+    display: grid;
+    grid-template-columns: 300px 100px ;
+    grid-template-rows: 100px auto ;
+    /* align-items: center; */
+    justify-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ddd;
+    position: relative;
+    
+}
+
+.c1 ul {
+    
+    grid-column: 1/3;
+    margin-top: 20px;
+    padding: 40px;
+    font-weight:lighter;
+    color: gray;
+
+
+    
+}
+/* make a list style */
+::marker {
+    color: #199cdb;
+    border: 3px solid #f7f7f7;
+    background-color: #199cdb;
+    border-radius: 50%;
+    align-self: start;
+    padding: 6px;
+    height: 15px;
+   font-size: 30px;
+} 
+.c1 h1 {
+  margin-top: 40px;
+  margin-left: 10px;
+  align-items: center;
+  justify-items: center;
+}
+.c1 a {
+    margin-top: 35px;;
+}
+.c1 .fa {
+    color: #ddd;
+    font-size: 50px;
+}
+/* create year box like example */
+.pad {
+    border: 2px white;
+    border-radius: 6px;
+    padding: 5px;
+    width: 70px;
+    background-color: rgb(110, 110, 241);
+    color: #f7f7f7;
+    text-align: center;
+    position: absolute;
+    left: 110px;
+    top: 200px;
+    font-style: italic;
+}
+.view-more  {
+    height: 38px;
+    width: 110px;
+}
+
+
+.btn {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+}
+#job {
+    overflow: visible;
+}
+/* hoc van form giống kinh nghiệm */
+/* hoaạt động giong form tren */
+
+/* so thich */
+.c2 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 200px auto ;
+    align-items: center;
+    justify-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ddd;
+    position: relative;
+    
+}
+/* set up grid area and style for each block */
+.soncontent {
+    grid-column: 1/5;
+
+}
+.c2 h1 {
+    grid-column: 1/3;
+}
+.c2 a {
+    grid-column: 3/5;
+}
+.c2 .fa {
+    color: #ddd;
+    font-size: 40px;
+    padding: 10px;
+}
+.c2 .fa-caret-down {
+    padding: 0;
+}
+.c2 .fa-caret-up {
+    padding: 0;
+}
+.hobby {
+    height: 100px;
+    align-self: center;
+    display: inline-block;
+}
+.hobby-viewless {
+    text-align: center;
+    margin-top: 20px;
+}
+.viewmore {
+    text-align: center;
+    grid-column: 2/-2;
+   margin-right: 100px;
+
+}
+/* .view-less {
+    margin-top: 30px;
+} */
+.hobby .fa {
+    background: white;
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid;
+    border-color: aquamarine;
+    text-align: center;
+
+}
+.text {
+    margin-left: 16px;
+}
+/* css ngoon ngu*/
+.c3 {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px ;
+    grid-template-rows: 200px auto auto ;
+    align-items: center;
+    justify-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ddd;
+    position: relative;
+}
+.c3 h1 {
+    grid-column: 1/3;
+}
+.c3 a {
+    grid-column:3/5 ;
+}
+.c3 .fa {
+    color: #ddd;
+    font-size: 50px;
+
+}
+.c3 .grade {
+    background: #199cdb;
+    height: 8px;
+    width: 65px;
+}
+.c3 .grade_d {
+    background: gray;
+    height: 8px;
+    width: 65px;
+}
+.c3 .eng {
+    grid-column: 2/5;
+    justify-self: flex-start;
+    margin-left: -50px;
+}
+.eng-skill {
+    display: flex;
+    gap:10px;
+}
+.c3 .jap {
+    grid-column: 2/5;
+    justify-self: start;
+    margin-left: -50px;
+}
+
+/* tao cot diem english */
+.c3 .p1 {
+    color: white;
+    font-size: 10px;
+    background-color: #199cdb;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 50px;
+}
+.c3 .p2 {
+    color: white;
+    font-size: 10px;
+    background-color: #199cdb;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 150px;
+}
+.c3 .p3 {
+    color: white;
+    font-size: 10px;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 250px;
+}
+/* tao cot diem japanese */
+.c3 .p6 {
+    color: white;
+    font-size: 10px;
+    background-color: #199cdb;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 250px;
+}
+.c3 .p4 {
+    color: white;
+    font-size: 10px;
+    background-color: #199cdb;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 50px;
+}
+.c3 .p5 {
+    color: white;
+    font-size: 10px;
+    background-color: #199cdb;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 150px;
+}
+/* css ky nang */
+.c4 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 200px auto auto auto auto ;
+    align-items: center;
+    justify-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ddd;
+    position: relative;
+
+}
+.program-skill {
+    display: flex;
+    gap:10px;
+}
+.c4 h1 {
+    grid-column: 1/3;
+}
+.c4 a {
+    grid-column: 3/5;
+}
+.c4 .fa {
+    color: #ddd;
+    font-size: 50px;
+
+}
+.c4 .html {
+    grid-column: 2/5;
+    justify-self: flex-start;
+    /* margin-left: -50px; */
+    color: gray;
+}
+/* tao cot diem html */
+.c4 .p1 {
+    color: white;
+    font-size: 10px;
+    background-color: #199cdb;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 50px;
+}
+.c4 .p2 {
+    color: white;
+    font-size: 10px;
+    background-color: #199cdb;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 150px;
+}
+.c4 .p3 {
+    color: white;
+    font-size: 10px;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 250px;
+}
+/* tao cot diem java */
+.c4 .java {
+    grid-column: 2/5;
+    justify-self: start;
+    /* margin-left: -50px; */
+    color: gray;
+}
+.c4 .p4 {
+    color: white;
+    font-size: 10px;
+    background-color: #199cdb;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 50px;
+}
+.c4 .p5 {
+    color: white;
+    font-size: 10px;
+    background-color: #199cdb;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 150px;
+}
+.c4 .p6 {
+    color: white;
+    font-size: 10px;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 250px;
+}
+/* tao cot diem node */
+.c4 .node {
+    grid-column: 2/5;
+    justify-self: start;
+    /* margin-left: -50px; */
+    color: gray;
+}
+.c4 .p7 {
+    color: white;
+    font-size: 10px;
+    background-color: #199cdb;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 50px;
+}
+.c4 .p8 {
+    color: white;
+    font-size: 10px;
+    background-color: #199cdb;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 150px;
+}
+.c4 .p9 {
+    color: white;
+    font-size: 10px;
+    background-color: #199cdb;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 250px;
+}
+/* tao cot diem boot */
+.c4 .boot {
+    grid-column: 2/5;
+    justify-self: start;
+    /* margin-left: -50px; */
+    color: gray;
+}
+.c4 .p10 {
+    color: white;
+    font-size: 10px;
+    background-color: #199cdb;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 50px;
+}
+.c4 .p11 {
+    color: white;
+    font-size: 10px;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 150px;
+}
+.c4 .p12 {
+    color: white;
+    font-size: 10px;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 1px 1px;
+    width: 80px;
+    text-align: center;
+    /* position: absolute; */
+    left: 250px;
+}
+.skill-viewless {
+    text-align: center;
+}
+/* css chung chi */
+#certificate .container {
+    background-color: #f7f7f7;
+    margin: 50px auto ;
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: auto auto;
+}
+#certificate img {
+    width: 250px;
+    height: auto;
+    margin-top: 20px;
+}
+.CER {
+    margin-top: 20px;
+}
+/* chung chi 1 */
+.CER_1 {
+    display: flex;
+    align-items: center;
+    gap:30px;
+    grid-column: 1/2;
+    border-bottom:1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.CER_1 li {
+    list-style-type: "\2013";
+    line-height: 25px;
+    margin-left: -10px;
+    margin-top: 10px;
+}
+/* chung chi 2 */
+.CER_2 {
+    display: flex;
+    align-items: center;
+    gap:30px;
+    border-left:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    padding-bottom: 20px;
+}
+.CER_2 li {
+    list-style-type: "\2013";
+    line-height: 25px;
+    margin-left: -10px;
+    margin-top: 10px;
+}
+/* chung chi 3 */
+.CER_3 {
+    display: flex;
+    align-items: center;
+    gap:30px;
+    
+}
+.CER_3 li {
+    list-style-type: "\2013";
+    line-height: 25px;
+    margin-left: -10px;
+    margin-top: 10px;
+}
+/* css du an */
+#project {
+    background-color:#f7f7f7
+}
+#project .container {
+    background-color: #f7f7f7;
+    margin: 50px auto ;
+    display: flex;
+    gap: 15px;
+}
+#project .section-title {
+    margin-left: 400px;
+    margin-top: 50px;
+}
+img {
+    width: 450px;
+    height: auto;
+}
+.CV {
+    text-align: center;
+    border: 1px solid #ddd;
+    width:450px ;
+    height: 80px;
+}
+/* style for table */
+table, tr,td {
+    width: 450px;
+    height: 120px;
+    border:1px solid #ddd;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  /* footer style */
+.icon {
+    display:flex ;
+    gap: 30px;
+    position: relative;
+    border:1px solid #ddd;
+    width: 450px;
+}  
+.first {
+    border: 2px white;
+    border-radius: 30px;
+    padding: 5px;
+    width: 70px;
+    background-color: rgb(110, 110, 241);
+    color: #f7f7f7;
+    text-align: center;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    font-style: italic;
+}
+.Second {
+    margin-left: 100px;
+    margin-top: 8px;
+}
+.thirth {
+    margin-top: 8px;
+}
+/* footer */
+#footer li{
+    list-style-type: none;
+}
+#footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+.face {
+    display: inline-block;
+    margin-right: 80px;
+    position: relative;
+
+}
+.linke {
+    display: inline-block;
+    margin-right: 80px;
+    position: relative;
+    margin-top: 20px;
+    
+}
+.git {
+    display: inline-block;
+    position: relative;
+    
+}
+#footer a {
+    text-decoration: none;
+}
+#footer a:hover {
+    color:red;
+}
+#footer .fa {
+   font-size: 40px;
+   position: absolute;
+   left: -55px;
+   top: -15px;
+}
+section > .container{
+    width: 1170px;
+    margin: auto;
+    display: block;
+    padding: 30px 50px;
+}
+
+
+#nav-bar {
+    text-align: center;
+}
+.content h1 {
+    color: #199cdb;
+    text-align: start;
+    padding: 20px;
+    border-bottom: 3px solid gray;
+}
+/* project.html grid */
+.container-blog {
+    margin: 50px 350px;
+}
+.content
+{
+    display: grid;
+    grid-template-columns: 400px 100px 300px 450px ;
+    grid-template-rows: auto auto ;
+    border: 5px solid blue;
+    overflow: visible;
+    width: 1260px;
+}
+/* project.html goal*/
+.block1 {
+    grid-column: 1/3;
+    border: 5px solid blue;
+}
+.Goals {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: auto auto auto;
+}
+.Goals .fa {
+    align-self: center;
+    margin-bottom: 30px;
+}
+.goa p,h3 {
+    font-size: 15px;
+    text-align: start;
+}
+/* project.html team */
+.block2 {
+    align-items: center;
+    border: 5px solid blue;
+}
+.team {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: auto auto auto;
+}
+.team .fa {
+    align-self: center;
+    margin-bottom: 20px;
+}
+.tea1 p,h3 {
+    font-size: 15px;
+    text-align: start;
+}
+/*project.html timeline */
+.block3 {
+    grid-column: 4/5;
+    grid-row: -3/-1;
+    border: 5px solid blue;
+}
+.time-line {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: auto auto auto;
+    /* grid-column: 3/4;
+    grid-row: -3/-1; */
+}
+.time-line .fa {
+    align-self: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    width: 80px;
+}
+.time-line p,h3 {
+    font-size: 15px;
+    text-align: start;
+}
+.time1 {
+    border-bottom: 1px solid gray;
+}
+/*project.html scopes */
+.block4 {
+    grid-column: 1/3; 
+    border: 5px solid blue;
+}
+.scopes {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    gap: 10px;
+     /* grid-row:-2/-3 ; */ 
+}
+.scop-content ul {
+    list-style: none;
+}
+.scop-content li {
+    font-size: 15px;
+    text-align: start;
+}
+.scop-content h3 {
+    text-align: center;
+}
+/* project.html primary */
+.block5 {
+    grid-column: 3/4; 
+    align-items: center;
+    border: 5px solid blue;
+}
+.primary {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows:  auto auto;
+    margin-top: 20px;
+    /* grid-row: -2/-3;
+    grid-column: 2/3; */
+}
+.primary .fa {
+   align-self: center;
+}
+.primary p {
+    font-size: 15px;
+    text-align: start;
+    margin-top: 10px;
+}
+/* set up media query for desktop */
+@media screen and (max-width: 1850px)  {
+    #profile {
+      display: none;
+    }
+    
+}

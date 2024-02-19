@@ -1,0 +1,188 @@
+/* media query setup for mobile */
+  @media screen and (max-width: 575px) {
+    /* banner setting */
+  #banner img{
+   width: 480px;
+   height: 680px;
+  }
+  .text-on-image{
+    align-self: center;
+    justify-content: center;
+    margin-left: 60px;
+    margin-top: 60px;
+    width: 220px;
+
+  }
+  /* nav-bar setting */
+  #nav-bar{
+    height: 400px;
+  }
+  .nav-status {
+    align-items: center;
+    justify-items: start;
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 100px 100px 100px 100px;
+  }
+  .grid-nav1{
+    grid-row: 1/2;
+  }
+  .grid-nav2{
+    grid-row: 3/2;
+    margin-right: 0;
+    border-right: none !important;
+  }
+  .grid-nav3{
+    grid-row: 3/4;
+    margin-left: 0;
+  }
+  .grid-nav4{
+    grid-row: 4/5;
+  }
+  /* body setting */
+  #about .container{
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 500px 500px;
+  }
+  .job-point{
+    grid-row: 1/2;
+    margin-bottom: -50px;
+  }
+  .job-point-content{
+    grid-row: 2/3;
+  }
+  /* inf4 */
+  #personal-info {
+    grid-row: 2/4;
+    margin-bottom: 100px;
+    margin-top: 0!important;
+  }
+  .hide {
+    position: absolute;
+    left:300px;
+    border:none;
+   
+   }
+   /* data */
+  #job-block {
+   width: 400px;
+   margin: 0 ;
+   display: block;
+  }
+  #job {
+    display: grid;
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+}
+.pad {
+  top: 200px !important; ;
+  left: 110px;
+}
+#cer-mobile {
+  grid-template-columns: 400px !important;
+  grid-template-rows: repeat(3, 300px) !important;
+  gap:20px;
+}
+/* project */
+#project .container {
+  display: grid;
+}
+#project .section-title {
+  align-items: start;
+  margin-left: 50px;
+}
+#project .container img {
+  width: 400px !important;
+}
+#project .container .CV {
+  width: 400px !important;
+}
+table, tr,td {
+  width: 400px !important;
+}
+#project .container .icon {
+  width: 400px !important;
+  height:130px;
+  display: flex;
+  flex-direction: column;
+}
+#project .icon .first {
+  margin-left: 10px ;
+  margin-top:10px ;
+}
+#project .icon .Second {
+  margin-left: 10px ;
+  margin-top:60px ;
+}
+#project .icon .thirth {
+  margin-top:-32px ;
+  margin-left: 10px;
+}
+/* footer */
+#footer .container {
+  display: flex;
+  padding: 0;
+}
+/* project html responsive */
+.project-body {
+  font-size: 50px;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* goals */
+.content {
+  width: 360px !important;
+}
+.container-blog {
+  margin-top: 50px;
+  margin-left: 0;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.Goals {
+  display: flex;
+  flex-direction: column;
+}
+.Goals .fa {
+  align-self: center;
+}
+.goa {
+  margin-left: 20px;
+}
+/* team */
+.team {
+  display: flex;
+  flex-direction: column;
+}
+.tea1 {
+  margin-left: 20px;
+}
+/* time-line */
+.time-line {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.time-line .fa {
+  align-self: flex-start;
+}
+.scopes {
+ display: flex;
+ flex-direction: column;
+}
+.scop-content {
+ align-self: flex-start;
+ align-self: center;
+}
+/* primary */
+.primary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+}

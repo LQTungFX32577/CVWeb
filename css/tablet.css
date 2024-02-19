@@ -1,0 +1,122 @@
+/*tablet display*/
+@media screen and (max-width: 1024px)  {
+   /* hide profile nav-bar */
+    #profile {
+      display: none;
+    }
+    /* navbar setting */
+    #nav-bar {
+        flex-direction: column;
+    }
+    #target {
+        padding: 74px 40px;
+        align-items: start;
+    }
+    .plus {
+        border-right: 1px solid #ddd;
+    }
+    .pad {
+        top:200px;
+    }
+    /* data setting */
+    #job-block {
+        margin: 0;
+        grid-template-columns: 500px 480px;
+        grid-template-rows: auto auto auto;
+    }
+    /* certificate setting */
+    #certificate .cer-con {
+        grid-template-columns: 400px 400px;
+        grid-template-rows: 150px 400px;
+    }
+    .CER_1 {
+       display: block;
+    }
+    .CER_2 {
+        display: block;
+     }
+     .CER_3 {
+        display: block;
+     }
+     /* project setting */
+     #project .container {
+        padding: 0;
+     }
+     #project .container img {
+        width: 280px;
+     }
+     #project .container .CV {
+        width: 280px;
+     }
+     table, tr,td {
+        width: 280px;
+     }
+     #project .container .icon {
+        width: 280px;
+     }
+     /* blog responsive */
+     .content {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto;
+     }
+/* project html responsive */
+.project-body {
+   font-size: 50px;
+   font-weight: 100;
+   text-transform: uppercase;
+   text-align: center;
+ }
+ /* goals */
+ .content {
+   width: 1000px;
+ }
+ .container-blog {
+   margin-top: 50px;
+   margin-left: 0;
+ }
+ .content {
+   display: flex;
+   flex-direction: column;
+ }
+ .Goals {
+   display: flex;
+   flex-direction: column;
+ }
+ .Goals .fa {
+   align-self: center;
+ }
+ .goa {
+   margin-left: 20px;
+ }
+ /* team */
+ .team {
+   display: flex;
+   flex-direction: column;
+ }
+ .tea1 {
+   margin-left: 20px;
+ }
+ /* time-line */
+ .time-line {
+   display: flex;
+   flex-direction: column;
+   margin-left: 20px;
+ }
+ .time-line .fa {
+   align-self: flex-start;
+ }
+ .scopes {
+  display: flex;
+  flex-direction: column;
+ }
+ .scop-content {
+  align-self: flex-start;
+  align-self: center;
+ }
+ /* primary */
+ .primary {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ }
