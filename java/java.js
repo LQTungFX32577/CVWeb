@@ -2,12 +2,22 @@
 //define variable to use
 const form = document.querySelector('.form-style');
 const info = document.querySelector('.info');
+const btn = document.querySelector('.moveTop');
 let show = 1;
 let show1 = 1;
 let show2 = 1;
 let show3 = 1;
 let show4 = 1;
 let show5 = 1;
+
+function handleMove() {
+  if(window.scrollY > 800) {
+    btn.style.opacity = '1'
+  }else {
+    btn.style.opacity = '0'
+  }
+}
+window.addEventListener('scroll', handleMove);
 
 function checkvalidemail() {
 const error = document.getElementById('form-description');
@@ -207,4 +217,6 @@ function viewless(signin) {
    });}
  
 
- 
+ btn.addEventListener('click', function(){
+   window.scroll({top:200, behavior: "smooth"});
+ })
