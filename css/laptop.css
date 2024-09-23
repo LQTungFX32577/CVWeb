@@ -9,7 +9,16 @@
    height: auto;
    position: relative;
 }
-
+.moveTop {
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    width: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: #a5a5a5;
+    color: white;
+}
 /* chen chu vao img */
 .text-on-image {
     position: absolute;
@@ -626,9 +635,20 @@
     width: 250px;
     height: auto;
     margin-top: 20px;
+    transition: all .3s ease;
 }
 .CER {
     margin-top: 20px;
+}
+
+.CER_1 img:hover {
+    transform: scale(2)
+}
+.CER_2 img:hover {
+    transform: scale(2)
+}
+.CER_3 img:hover {
+    transform: scale(2)
 }
 /* chung chi 1 */
 .CER_1 {
@@ -673,6 +693,10 @@
     line-height: 25px;
     margin-left: -10px;
     margin-top: 10px;
+}
+.project_2 h3{
+    text-align: center;
+    font-size: 30px;
 }
 /* css du an */
 #project {
