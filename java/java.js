@@ -1,222 +1,100 @@
 'use strict';
-//define variable to use
-const form = document.querySelector('.form-style');
-const info = document.querySelector('.info');
+
 const btn = document.querySelector('.moveTop');
-let show = 1;
-let show1 = 1;
-let show2 = 1;
-let show3 = 1;
-let show4 = 1;
-let show5 = 1;
+const langToggle = document.getElementById('lang-toggle');
+
+function getLang() {
+  return localStorage.getItem('cv-lang') || 'vi';
+}
+
+function setLang(lang) {
+  localStorage.setItem('cv-lang', lang);
+  document.documentElement.lang = lang;
+  langToggle.textContent = lang === 'vi' ? 'EN' : 'VI';
+  applyTranslations(lang);
+  renderSkillsMarquee();
+}
+
+function applyTranslations(lang) {
+  const dict = i18n[lang];
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    dict[key] && (el.textContent = dict[key]);
+  });
+}
+
+function buildSkillClusters(lang) {
+  const dict = i18n[lang];
+  return skillCategories.map((cat) => {
+    const items = skillIcons[cat.id].map((item) =>
+      `<div class="skill-item">
+        <i class="${item.icon}"></i>
+        <span>${item.name}</span>
+      </div>`
+    ).join('');
+
+    return `<div class="skill-cluster" data-category="${cat.labelKey}">
+      <span class="cluster-label">${dict[cat.labelKey]}</span>
+      <div class="cluster-icons">${items}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderSkillsMarquee() {
+  const track = document.getElementById('skills-marquee-track');
+  const clusters = buildSkillClusters(getLang());
+
+  track.innerHTML = `
+    <div class="marquee-group">${clusters}</div>
+    <div class="marquee-group" aria-hidden="true">${clusters}</div>
+  `;
+}
+
+function renderTechTags() {
+  const map = {
+    'tech-panasonic': projectTech.panasonic,
+    'tech-gotrack': projectTech.gotrack,
+    'tech-xhero': projectTech.xhero
+  };
+
+  Object.entries(map).forEach(([id, tags]) => {
+    const container = document.getElementById(id);
+    container.innerHTML = tags.map((tag) =>
+      `<span class="tech-tag">${tag}</span>`
+    ).join('');
+  });
+}
+
+function initScrollReveal() {
+  const observer = new IntersectionObserver(
+    (entries) => entries.forEach((entry) => {
+      entry.isIntersecting && entry.target.classList.add('revealed');
+    }),
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+}
 
 function handleMove() {
-  if(window.scrollY > 800) {
-    btn.style.opacity = '1'
-  }else {
-    btn.style.opacity = '0'
-  }
+  btn.style.opacity = window.scrollY > 600 ? '1' : '0';
 }
-window.addEventListener('scroll', handleMove);
 
-function checkvalidemail() {
-const error = document.getElementById('form-description');
-const text = document.getElementById('email').value;
-//check invalid character 
-const checkvalue = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
-const check =checkvalue.test(text);
+function initScrollTop() {
+  window.addEventListener('scroll', handleMove);
+  btn.addEventListener('click', () => window.scroll({ top: 0, behavior: 'smooth' }));
+}
 
-// const info = document.querySelector('.info');
-console.log(check);
-// const form = document.querySelector('.form-style');
-// check email 
- if(check) {
-    form.style.display = 'none';
-    info.style.display = 'block';
-     error.innerHTML='';
- } else {
-     error.innerHTML='please type correct font 📄'; 
-     error.style.color = 'red';
- }  
-};
-//show in4 block if mail is valid
-   const hide = document.querySelector('.hide');
-   hide.addEventListener('click', function(){
-    form.style.display = 'block';
-    info.style.display = 'none';
- });
- //1
-//view more display and function
-
-function handleonmouseover(signin){ if(show==1) {
-   const viewmore = signin.querySelector('.view-more');
-   viewmore.style.display = 'inline-block';
-}
-}
-function handleonmouseout(signin){
-    const viewmore = signin.querySelector('.view-more');
-    viewmore.style.display = 'none';
- }
-//show content 
-function view_more(signin) {
-  const parentsignin = signin.closest('.jb')
-  const soncontent =  parentsignin.querySelectorAll('.soncontent');
-  soncontent.forEach(signin =>{
-    signin.style.display ='block';
-    show = 0;
-    
-});
-}
-//view less display and function
-function viewless(signin) { 
-    const parentsignin = signin.closest('.jb')
-    const soncontent =  parentsignin.querySelectorAll('.soncontent');
-    soncontent.forEach(signin =>{
-      signin.style.display ='none';
-      show = 1;
+function initLangToggle() {
+  langToggle.addEventListener('click', () => {
+    setLang(getLang() === 'vi' ? 'en' : 'vi');
   });
-  }
-  //2
-  function handleonmouseover1(signin){ if(show1==1) {
-    const viewmore = signin.querySelector('.view-more');
-    viewmore.style.display = 'inline-block';
- }
- }
- function handleonmouseout1(signin){
-     const viewmore = signin.querySelector('.view-more');
-     viewmore.style.display = 'none';
-  }
- //show content 
- function view_more1(signin) {
-   const parentsignin = signin.closest('.jb')
-   const soncontent =  parentsignin.querySelectorAll('.soncontent');
-   soncontent.forEach(signin =>{
-     signin.style.display ='block';
-     show1 = 0;
-     
- });
- }
- function viewless1(signin) { 
-     const parentsignin = signin.closest('.jb')
-     const soncontent =  parentsignin.querySelectorAll('.soncontent');
-     soncontent.forEach(signin =>{
-       signin.style.display ='none';
-       show1 = 1;
-   });
-   }
-  //3
-  function handleonmouseover2(signin){ if(show2==1) {
-    const viewmore = signin.querySelector('.view-more');
-    viewmore.style.display = 'inline-block';
- }
- }
- function handleonmouseout2(signin){
-     const viewmore = signin.querySelector('.view-more');
-     viewmore.style.display = 'none';
-  }
- //show content 
- function view_more2(signin) {
-   const parentsignin = signin.closest('.jb')
-   const soncontent =  parentsignin.querySelectorAll('.soncontent');
-   soncontent.forEach(signin =>{
-     signin.style.display ='block';
-     show2 = 0;
-     
- });
- }
- function viewless2(signin) { 
-     const parentsignin = signin.closest('.jb')
-     const soncontent =  parentsignin.querySelectorAll('.soncontent');
-     soncontent.forEach(signin =>{
-       signin.style.display ='none';
-       show2 = 1;
-   });
-   } 
-   //4
-   function handleonmouseover3(signin){ if(show3==1) {
-    const viewmore = signin.querySelector('.view-more');
-    viewmore.style.display = 'inline-block';
- }
- }
- function handleonmouseout3(signin){
-     const viewmore = signin.querySelector('.view-more');
-     viewmore.style.display = 'none';
-  }
- //show content 
- function view_more3(signin) {
-   const parentsignin = signin.closest('.jb')
-   const soncontent =  parentsignin.querySelectorAll('.soncontent');
-   soncontent.forEach(signin =>{
-     signin.style.display ='block';
-     show3 = 0;
-     
- });
- }
- function viewless3(signin) { 
-     const parentsignin = signin.closest('.jb')
-     const soncontent =  parentsignin.querySelectorAll('.soncontent');
-     soncontent.forEach(signin =>{
-       signin.style.display ='none';
-       show3 = 1;
-   });
-   }
-   //5
-   function handleonmouseover4(signin){ if(show4==1) {
-    const viewmore = signin.querySelector('.view-more');
-    viewmore.style.display = 'inline-block';
- }
- }
- function handleonmouseout4(signin){
-     const viewmore = signin.querySelector('.view-more');
-     viewmore.style.display = 'none';
-  }
- //show content 
- function view_more4(signin) {
-   const parentsignin = signin.closest('.jb')
-   const soncontent =  parentsignin.querySelectorAll('.soncontent');
-   soncontent.forEach(signin =>{
-     signin.style.display ='block';
-     show4 = 0;
-     
- });
- }
- function viewless4(signin) { 
-     const parentsignin = signin.closest('.jb')
-     const soncontent =  parentsignin.querySelectorAll('.soncontent');
-     soncontent.forEach(signin =>{
-       signin.style.display ='none';
-       show4 = 1;
-   });
-   }
-   //6
-   function handleonmouseover5(signin){ if(show5==1) {
-    const viewmore = signin.querySelector('.view-more');
-    viewmore.style.display = 'inline-block';
- }
- }
- function handleonmouseout5(signin){
-     const viewmore = signin.querySelector('.view-more');
-     viewmore.style.display = 'none';
-  }
- //show content 
- function view_more5(signin) {
-   const parentsignin = signin.closest('.jb')
-   const soncontent =  parentsignin.querySelectorAll('.soncontent');
-   soncontent.forEach(signin =>{
-     signin.style.display ='block';
-     show5 = 0;
-     
- });
- }
- function viewless5(signin) { 
-     const parentsignin = signin.closest('.jb')
-     const soncontent =  parentsignin.querySelectorAll('.soncontent');
-     soncontent.forEach(signin =>{
-       signin.style.display ='none';
-       show5 = 1;
-   });}
- 
+}
 
- btn.addEventListener('click', function(){
-   window.scroll({top:200, behavior: "smooth"});
- })
+document.addEventListener('DOMContentLoaded', () => {
+  renderTechTags();
+  initScrollReveal();
+  initScrollTop();
+  initLangToggle();
+  setLang(getLang());
+});
