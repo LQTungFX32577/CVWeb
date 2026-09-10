@@ -1165,7 +1165,7 @@ section > .container {
 
 #job-block {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
     max-width: 1170px;
     width: 100%;
